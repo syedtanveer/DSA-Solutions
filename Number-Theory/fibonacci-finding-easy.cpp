@@ -18,7 +18,7 @@ void multiply_mat(lli a[][2], lli b[][2], int rows) {
 		}
 	}
 }
-void mpow(lli a[][2], int n){
+void mpow(lli a[][2], lli n){
 	lli I[2][2] = {{1, 0},{0, 1}};
 	while(n){
 		if(n%2){
@@ -34,7 +34,7 @@ void mpow(lli a[][2], int n){
         }
     }
 }
-int get_fib(int a, int b, int n){
+int get_fib(int a, int b, lli n){
 	lli t_matrix[2][2];
 	lli fib_matrix[1][2] = {a, b};
 	t_matrix[0][0] = 0;
@@ -46,10 +46,10 @@ int get_fib(int a, int b, int n){
 	return fib_matrix[0][0];
 }
 int main() {
-	int q, a, b, n;
+	lli q, n;
 	cin>>q;
 	while(q--){
-		cin>>a>>b>>n;
-		cout<<get_fib(a, b, n)<<endl;
+		cin>>n;
+		cout<<get_fib(1, 2, n-1)<<endl;
 	}
 }
